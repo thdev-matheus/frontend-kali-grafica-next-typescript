@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     
     color: ${(props) => props.theme.txtPrimary};
     background-color: ${(props) => props.theme.bgPrimary};
+
+    font-family: 'Inter';
   }
 
   a {

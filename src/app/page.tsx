@@ -1,7 +1,9 @@
+import * as B from "@/blocks";
+
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <B.HeaderBlock />
     </>
   );
 }
