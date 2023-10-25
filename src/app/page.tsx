@@ -1,3 +1,5 @@
+"use client";
+
 import * as B from "@/blocks";
 
 export default function Home() {
@@ -5,6 +7,7 @@ export default function Home() {
     <>
       <B.HeaderBlock />
       <B.WelcomeBlock />
+      <B.ServicesBlock />
     </>
   );
 }
