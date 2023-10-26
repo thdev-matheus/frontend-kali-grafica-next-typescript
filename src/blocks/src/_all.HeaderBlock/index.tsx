@@ -10,10 +10,10 @@ export const HeaderBlock = () => {
       </S.Container>
 
       <S.BoxColors>
-        <div className="cyan" />
-        <div className="magenta" />
-        <div className="yellow" />
-        <div className="black" />
+        <div className="cyan"></div>
+        <div className="magenta"></div>
+        <div className="yellow"></div>
+        <div className="black"></div>
       </S.BoxColors>
     </>
   );

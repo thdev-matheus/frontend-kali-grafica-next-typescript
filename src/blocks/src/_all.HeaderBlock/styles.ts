@@ -19,12 +19,11 @@ export const Container = styled.section`
 
 export const BoxColors = styled.div`
   width: 100%;
-  height: 0.3rem;
 
   display: flex;
 
   & > .cyan {
-    height: 100%;
+    height: 0.3rem;
 
     flex: 1;
 
@@ -32,7 +31,7 @@ export const BoxColors = styled.div`
   }
 
   & > .magenta {
-    height: 100%;
+    height: 0.3rem;
 
     flex: 1;
 
@@ -40,15 +39,14 @@ export const BoxColors = styled.div`
   }
 
   & > .yellow {
-    height: 100%;
-
+    height: 0.3rem;
     flex: 1;
 
     background-color: yellow;
   }
 
   & > .black {
-    height: 100%;
+    height: 0.3rem;
 
     flex: 3;
 
