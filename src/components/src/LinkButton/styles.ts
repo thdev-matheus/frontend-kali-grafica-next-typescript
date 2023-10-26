@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface IContainerProps {
   secondary?: boolean;
+  animationName?: "bounce" | "shake" | "fadeinout";
 }
 
 export const Container = styled.a<IContainerProps>`
@@ -19,4 +20,10 @@ export const Container = styled.a<IContainerProps>`
   color: ${(props) => props.theme.txtPrimary};
   background-color: ${(props) =>
     props.secondary ? props.theme.secondary : props.theme.primary};
+
+  animation-name: ${(props) => props.animationName};
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 `;

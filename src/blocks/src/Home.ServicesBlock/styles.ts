@@ -1,28 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  @media (min-width: 481px) {
-  }
+  width: 100%;
 
-  @media (min-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 2rem 3%;
+
+  & > h2 {
+    font-size: 16pt;
+    text-align: center;
+
+    color: ${(props) => props.theme.secondary};
   }
 
   @media (min-width: 992px) {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    padding: 2rem 10%;
-
     & > h2 {
       font-size: 18pt;
-      text-align: center;
-
-      color: ${(props) => props.theme.secondary};
     }
   }
 
@@ -34,19 +32,18 @@ export const Container = styled.section`
 `;
 
 export const BoxCards = styled.section`
-  @media (min-width: 481px) {
-  }
+  width: 100%;
 
-  @media (min-width: 768px) {
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem;
 
   @media (min-width: 992px) {
-    width: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     gap: 0.5rem;
 
     padding: 2rem;

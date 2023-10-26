@@ -7,6 +7,7 @@ interface ILinkButtonProps {
   title: string;
   label: string;
   secondary?: boolean;
+  animationName?: "bounce" | "shake" | "fadeinout";
 }
 
 export const LinkButton = ({
@@ -14,6 +15,7 @@ export const LinkButton = ({
   label,
   title,
   secondary = false,
+  animationName = "bounce",
 }: ILinkButtonProps) => {
   return (
     <S.Container
@@ -21,6 +23,7 @@ export const LinkButton = ({
       target="_blank"
       title={title}
       secondary={secondary}
+      animationName={animationName}
     >
       {label}
     </S.Container>

@@ -15,6 +15,8 @@ export const Container = styled.section`
   border: 2px solid ${(props) => props.theme.borderPrimary};
   border-radius: 1rem;
 
+  background-color: ${(props) => props.theme.bgPrimary};
+
   transition: 1.2s ease;
 
   & > svg {
