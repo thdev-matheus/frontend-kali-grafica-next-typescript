@@ -6,9 +6,15 @@ import { WelcomeBlock } from "./src/Home.WelcomeBlock";
 import { ServicesBlock } from "./src/Home.ServicesBlock";
 import { PartnersBlock } from "./src/Home.PartnersBlock";
 import { CallSiteBlock } from "./src/Home.CallSiteBlock";
-
+import { CallPrintShopBlock } from "./src/Home.CallPrintShop";
 // exports
 
 export { HeaderBlock };
 
-export { WelcomeBlock, ServicesBlock, PartnersBlock, CallSiteBlock };
+export {
+  WelcomeBlock,
+  ServicesBlock,
+  PartnersBlock,
+  CallSiteBlock,
+  CallPrintShopBlock,
+};

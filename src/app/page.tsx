@@ -10,6 +10,7 @@ export default function Home() {
       <B.ServicesBlock />
       <B.PartnersBlock />
       <B.CallSiteBlock />
+      <B.CallPrintShopBlock />
     </>
   );
 }

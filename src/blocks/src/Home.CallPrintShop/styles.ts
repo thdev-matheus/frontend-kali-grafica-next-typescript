@@ -7,21 +7,41 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
 
-  padding: 0 5% 2rem;
+  padding: 2rem 5%;
+
+  background-color: ${(props) => props.theme.bgSecondary};
 
   @media (min-width: 992px) {
-    padding: 0 10% 2rem;
+    padding: 2rem 10%;
   }
 `;
 
 export const BoxLeft = styled.section`
+  display: none;
+
+  @media (min-width: 768px) {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & > img {
+      width: 80%;
+    }
+  }
+`;
+
+export const BoxRight = styled.section`
   width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
   text-align: center;
 
@@ -30,7 +50,14 @@ export const BoxLeft = styled.section`
 
     font-size: 18pt;
 
-    color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.secondary};
+  }
+
+  & > ul {
+    list-style: none;
+
+    font-size: 12pt;
+    font-style: italic;
   }
 
   & > p {
@@ -42,6 +69,10 @@ export const BoxLeft = styled.section`
 
     & > h3 {
       font-size: 16pt;
+    }
+
+    & > ul {
+      font-size: 10pt;
     }
 
     & > p {
@@ -56,22 +87,20 @@ export const BoxLeft = styled.section`
       font-size: 18pt;
     }
 
+    & > ul {
+      font-size: 12pt;
+    }
+
     & > p {
       font-size: 12pt;
     }
   }
 
   @media (min-width: 1200px) {
-    gap: 2rem;
-
     padding: 1rem 2rem;
 
     & > h3 {
       font-size: 22pt;
-    }
-
-    & > p {
-      font-size: 14pt;
     }
   }
 `;
@@ -92,35 +121,5 @@ export const BoxMobile = styled.section`
 
   @media (min-width: 768px) {
     display: none;
-  }
-`;
-
-export const BoxRight = styled.section`
-  display: none;
-
-  @media (min-width: 768px) {
-    width: 40%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-
-    & > img {
-      width: 70%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    & > img {
-      width: 80%;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    & > img {
-      width: 70%;
-    }
   }
 `;
