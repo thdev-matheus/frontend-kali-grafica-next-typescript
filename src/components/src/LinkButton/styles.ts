@@ -16,6 +16,7 @@ export const Container = styled.a<IContainerProps>`
 
   font-weight: bold;
   font-size: 12pt;
+  white-space: nowrap;
 
   color: ${(props) => props.theme.txtPrimary};
   background-color: ${(props) =>
