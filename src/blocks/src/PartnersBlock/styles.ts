@@ -1,62 +1,80 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem;
+  margin: 3rem 0;
+
+  border-radius: 10rem;
+
+  text-align: center;
+
+  background-color: ${(props) => props.theme.bgSecondary};
+
+  & > h3 {
+    font-size: 10pt;
+  }
+
   @media (min-width: 481px) {
+    padding: 2rem 3rem;
+
+    & > h3 {
+      font-size: 12pt;
+    }
   }
 
   @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
-  }
-
-  @media (min-width: 1200px) {
     width: 80%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 
-    padding: 2rem 4rem;
-    margin: 5rem 0;
-
-    border-radius: 10rem;
-
-    background-color: ${(props) => props.theme.bgSecondary};
+    padding: 3rem 4rem;
 
     & > h3 {
       font-size: 16pt;
     }
   }
 
-  @media (min-width: 1920px) {
+  @media (min-width: 992px) {
+    gap: 3rem;
+
+    padding: 4rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 2rem 4rem;
   }
 `;
 
 export const BoxImg = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  & > img {
+    height: 1.5rem;
+  }
+
   @media (min-width: 481px) {
+    & > img {
+      height: 2rem;
+    }
   }
 
   @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
-  }
-
-  @media (min-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 2rem;
 
     & > img {
       height: 3rem;
     }
-  }
-
-  @media (min-width: 1920px) {
   }
 `;
