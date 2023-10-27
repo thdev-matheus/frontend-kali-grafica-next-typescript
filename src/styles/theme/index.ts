@@ -16,6 +16,7 @@ export const light = {
   white: "#fff",
   black: "#252525",
   blackAlpha: "#25252575",
+  dark: "#101010",
 };
 
 export const dark = {
@@ -36,4 +37,5 @@ export const dark = {
   white: light.white,
   black: light.black,
   blackAlpha: light.blackAlpha,
+  dark: light.dark,
 };

@@ -15,6 +15,7 @@ export default function Home() {
       <B.CallCoursesBlock />
       <B.MissionValuesBlock />
       <B.FooterBlock />
+      <B.CopyrightBlock />
     </>
   );
 }
