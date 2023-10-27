@@ -42,7 +42,7 @@ export const BoxRigth = styled.section`
   & > h3 {
     font-size: 18pt;
 
-    color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.secondary};
   }
 
   & > p {

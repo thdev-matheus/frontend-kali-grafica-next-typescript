@@ -8,7 +8,7 @@ export const light = {
   bgTertiary: "#eeeeee85",
   borderPrimary: "#252525",
   borderSecondary: "#b3b3b3",
-  txtPrimary: "#3B3B3B",
+  txtPrimary: "#6b6b6b",
   txtSecondary: "#b3b3b3",
   error: "#c0392b",
   warning: "#f1c40f",

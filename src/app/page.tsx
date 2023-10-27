@@ -14,6 +14,7 @@ export default function Home() {
       <B.CallSocialMediaBlock />
       <B.CallCoursesBlock />
       <B.MissionValuesBlock />
+      <B.FooterBlock />
     </>
   );
 }

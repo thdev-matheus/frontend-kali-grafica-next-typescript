@@ -1,5 +1,6 @@
 // all pages
 import { HeaderBlock } from "./src/_all.HeaderBlock";
+import { FooterBlock } from "./src/_all.FooterBlock";
 
 //home page
 import { WelcomeBlock } from "./src/Home.WelcomeBlock";
@@ -13,7 +14,7 @@ import { MissionValuesBlock } from "./src/Home.MissionValuesBlock";
 
 // exports
 
-export { HeaderBlock };
+export { HeaderBlock, FooterBlock };
 
 export {
   WelcomeBlock,
