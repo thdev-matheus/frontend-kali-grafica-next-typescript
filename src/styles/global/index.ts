@@ -63,14 +63,14 @@ export const GlobalStyle = createGlobalStyle`
     23%,
     27%,
     31% {
-      transform: rotate(-15deg);
+      transform: rotate(-5deg);
     }
 
     17%,
     21%,
     25%,
     29% {
-      transform: rotate(15deg);
+      transform: rotate(5deg);
     }
 
     33% {

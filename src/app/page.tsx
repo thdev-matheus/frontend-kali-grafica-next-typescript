@@ -11,6 +11,7 @@ export default function Home() {
       <B.PartnersBlock />
       <B.CallSiteBlock />
       <B.CallPrintShopBlock />
+      <B.CallSocialMediaBlock />
     </>
   );
 }
