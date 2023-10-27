@@ -9,6 +9,7 @@ import { CallSiteBlock } from "./src/Home.CallSiteBlock";
 import { CallPrintShopBlock } from "./src/Home.CallPrintShopBlock";
 import { CallSocialMediaBlock } from "./src/Home.CallSocialMediaBlock";
 import { CallCoursesBlock } from "./src/Home.CallCoursesBlock";
+import { MissionValuesBlock } from "./src/Home.MissionValuesBlock";
 
 // exports
 
@@ -22,4 +23,5 @@ export {
   CallPrintShopBlock,
   CallSocialMediaBlock,
   CallCoursesBlock,
+  MissionValuesBlock,
 };

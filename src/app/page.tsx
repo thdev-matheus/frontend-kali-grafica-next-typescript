@@ -13,6 +13,7 @@ export default function Home() {
       <B.CallPrintShopBlock />
       <B.CallSocialMediaBlock />
       <B.CallCoursesBlock />
+      <B.MissionValuesBlock />
     </>
   );
 }
