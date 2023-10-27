@@ -1,57 +1,63 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  @media (min-width: 481px) {
-  }
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem 5%;
 
   @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
     padding: 2rem 10%;
   }
 `;
 
 export const Box = styled.section`
-  @media (min-width: 481px) {
-  }
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: flex-start;
   }
 `;
 
 export const BoxImg = styled.section`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+
+  & > img {
+    width: 100%;
+
+    transition: 1.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   @media (min-width: 481px) {
-  }
-
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
-    width: 50%;
-
-    display: flex;
-    justify-content: center;
-
     & > img {
       width: 90%;
     }
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+
+    margin-bottom: 0;
   }
 
   @media (min-width: 1200px) {
@@ -62,39 +68,57 @@ export const BoxImg = styled.section`
 `;
 
 export const BoxText = styled.section`
-  @media (min-width: 481px) {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  text-align: center;
+
+  & > h3 {
+    font-size: 22pt;
+
+    color: ${(props) => props.theme.primary};
+  }
+
+  & > p {
+    font-size: 12pt;
+
+    & > span {
+      font-weight: bold;
+
+      color: ${(props) => props.theme.secondary};
+    }
+  }
+
+  & > a {
+    margin-top: 1rem;
   }
 
   @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
     width: 50%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
 
     padding: 0 2rem;
 
-    text-align: center;
-
     & > h3 {
       font-size: 18pt;
-
-      color: ${(props) => props.theme.primary};
     }
 
     & > p {
+      font-size: 9pt;
+    }
+
+    & > a {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    & > p {
       font-size: 12pt;
-
-      & > span {
-        font-weight: bold;
-
-        color: ${(props) => props.theme.secondary};
-      }
     }
 
     & > a {
