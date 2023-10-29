@@ -20,6 +20,8 @@ export const BoxLeft = styled.section`
 
   & > img {
     width: 85%;
+
+    transform-origin: left top;
   }
 
   @media (min-width: 768px) {
@@ -42,7 +44,7 @@ export const BoxRight = styled.section`
 
   padding: 2rem;
 
-  & > h1 {
+  .welcome_title {
     margin-bottom: 1rem;
 
     font-size: 16pt;
@@ -52,7 +54,7 @@ export const BoxRight = styled.section`
     color: ${(props) => props.theme.primary};
   }
 
-  & > p {
+  .welcome_paragraph {
     font-size: 12pt;
 
     text-align: center;
@@ -68,7 +70,7 @@ export const BoxRight = styled.section`
   @media (min-width: 992px) {
     gap: 1rem;
 
-    & > h1 {
+    .welcome_title {
       margin-bottom: 2rem;
 
       font-size: 18pt;
@@ -76,11 +78,11 @@ export const BoxRight = styled.section`
   }
 
   @media (min-width: 1200px) {
-    & > h1 {
+    .welcome_title {
       font-size: 22pt;
     }
 
-    & > p {
+    .welcome_paragraph {
       font-size: 16pt;
     }
   }
