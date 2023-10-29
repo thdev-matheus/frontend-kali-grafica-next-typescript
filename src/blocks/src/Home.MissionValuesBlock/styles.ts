@@ -38,6 +38,10 @@ export const BoxImg = styled.section`
 
   margin-bottom: 2rem;
 
+  .mission_image_box {
+    overflow: visible;
+  }
+
   .mission_image {
     width: 100%;
 

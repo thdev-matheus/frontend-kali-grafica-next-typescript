@@ -29,6 +29,7 @@ export const MissionValuesBlock = () => {
       <S.Box>
         <S.BoxImg ref={imgRef}>
           <C.Animated
+            identifierClass="mission_image_box"
             customVariants={variants}
             customTransition={transition}
             width="100%"
