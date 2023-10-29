@@ -13,18 +13,29 @@ import {
 export const ServicesBlock = () => {
   return (
     <S.Container>
-      <h2>
-        Confira abaixo as nossas especialidades e conheça alguns dos principais
-        serviços que dispomos
-      </h2>
+      <C.Animated>
+        <h2 className="services_title">
+          Confira abaixo as nossas especialidades e conheça alguns dos
+          principais serviços que dispomos
+        </h2>
+      </C.Animated>
 
       <S.BoxCards>
-        <C.ServiceCard icon={FaPenNib} label="Gráfica Expressa" />
-        <C.ServiceCard icon={FaCode} label="Criação de Sites e Aplicativos" />
-        <C.ServiceCard icon={FaGraduationCap} label="Cursos e Palestras" />
+        <C.ServiceCard icon={FaPenNib} label="Gráfica Expressa" delay={0.25} />
+        <C.ServiceCard
+          icon={FaCode}
+          label="Criação de Sites e Aplicativos"
+          delay={0.5}
+        />
+        <C.ServiceCard
+          icon={FaGraduationCap}
+          label="Cursos e Palestras"
+          delay={0.75}
+        />
         <C.ServiceCard
           icon={FaInstagram}
           label="Gerenciamento de Redes Sociais"
+          delay={1}
         />
       </S.BoxCards>
 

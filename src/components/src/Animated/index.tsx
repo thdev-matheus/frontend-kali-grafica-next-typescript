@@ -11,6 +11,7 @@ interface IAnimatedProps {
   customTransition?: object;
   withSlide?: boolean;
   slideSecondary?: boolean;
+  identifierClass?: string;
 }
 
 export const Animated = ({
@@ -20,6 +21,7 @@ export const Animated = ({
   width = "fit-content",
   withSlide = false,
   slideSecondary = false,
+  identifierClass,
 }: IAnimatedProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -53,7 +55,7 @@ export const Animated = ({
   }, [isInView]);
 
   return (
-    <S.Container width={width} ref={ref}>
+    <S.Container width={width} ref={ref} className={identifierClass}>
       <motion.div
         variants={variants}
         initial={variants.hidden}

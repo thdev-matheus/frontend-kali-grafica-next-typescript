@@ -11,7 +11,7 @@ export const Container = styled.section`
 
   padding: 2rem 3%;
 
-  & > h2 {
+  .services_title {
     font-size: 16pt;
     text-align: center;
 
@@ -19,13 +19,13 @@ export const Container = styled.section`
   }
 
   @media (min-width: 992px) {
-    & > h2 {
+    .services_title {
       font-size: 18pt;
     }
   }
 
   @media (min-width: 1200px) {
-    & > h2 {
+    .services_title {
       font-size: 22pt;
     }
   }
@@ -41,6 +41,10 @@ export const BoxCards = styled.section`
   gap: 1rem;
 
   padding: 1rem;
+
+  .service_card {
+    overflow: visible;
+  }
 
   @media (min-width: 992px) {
     justify-content: space-around;
