@@ -22,6 +22,10 @@ export const BoxColors = styled.div`
 
   display: flex;
 
+  & > .box {
+    transform-origin: left center;
+  }
+
   & > .cyan {
     height: 0.3rem;
 
