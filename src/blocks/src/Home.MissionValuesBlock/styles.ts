@@ -38,7 +38,7 @@ export const BoxImg = styled.section`
 
   margin-bottom: 2rem;
 
-  & > img {
+  .mission_image {
     width: 100%;
 
     transition: 1.2s;
@@ -49,7 +49,7 @@ export const BoxImg = styled.section`
   }
 
   @media (min-width: 481px) {
-    & > img {
+    .mission_image {
       width: 90%;
     }
   }
@@ -61,7 +61,7 @@ export const BoxImg = styled.section`
   }
 
   @media (min-width: 1200px) {
-    & > img {
+    .mission_image {
       width: 80%;
     }
   }
@@ -78,13 +78,13 @@ export const BoxText = styled.section`
 
   text-align: center;
 
-  & > h3 {
+  .mission_title {
     font-size: 22pt;
 
     color: ${(props) => props.theme.primary};
   }
 
-  & > p {
+  .mission_paragraph {
     font-size: 12pt;
 
     & > span {
@@ -103,11 +103,11 @@ export const BoxText = styled.section`
 
     padding: 0 2rem;
 
-    & > h3 {
+    .mission_title {
       font-size: 18pt;
     }
 
-    & > p {
+    .mission_paragraph {
       font-size: 9pt;
     }
 
@@ -117,7 +117,7 @@ export const BoxText = styled.section`
   }
 
   @media (min-width: 992px) {
-    & > p {
+    .mission_paragraph {
       font-size: 12pt;
     }
 
@@ -127,11 +127,11 @@ export const BoxText = styled.section`
   }
 
   @media (min-width: 1200px) {
-    & > h3 {
+    .mission_title {
       font-size: 22pt;
     }
 
-    & > p {
+    .mission_paragraph {
       font-size: 16pt;
     }
 
