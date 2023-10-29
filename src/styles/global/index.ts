@@ -98,4 +98,22 @@ export const GlobalStyle = createGlobalStyle`
       scale: 1;
     }
   }
+
+  @keyframes particle {
+    0% {
+    transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(calc(0.3rem - 1rem * ${Math.random()}), calc(0.5rem - 1.2rem * ${Math.random()}));
+    }
+    50% {
+      transform: translate(calc(0.5rem - 1rem * ${Math.random()}), calc(0.3rem - 1rem * ${Math.random()}));
+    }
+    75% {
+      transform: translate(calc(0.3rem - 1.2rem * ${Math.random()}), calc(0.5rem - 1rem * ${Math.random()}));
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 `;

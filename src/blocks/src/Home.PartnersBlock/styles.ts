@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.section`
+export const Container = styled(motion.section)`
   width: 90%;
 
   display: flex;
@@ -18,14 +19,14 @@ export const Container = styled.section`
 
   background-color: ${(props) => props.theme.bgSecondary};
 
-  & > h3 {
+  .partners_title {
     font-size: 10pt;
   }
 
   @media (min-width: 481px) {
     padding: 2rem 3rem;
 
-    & > h3 {
+    .partners_title {
       font-size: 12pt;
     }
   }
@@ -37,7 +38,7 @@ export const Container = styled.section`
 
     padding: 3rem 4rem;
 
-    & > h3 {
+    .partners_title {
       font-size: 16pt;
     }
   }
