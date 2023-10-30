@@ -20,18 +20,18 @@ export const BoxLeft = styled.section`
 
   text-align: center;
 
-  & > h3 {
+  .social_media_title {
     font-size: 18pt;
 
     color: ${(props) => props.theme.primary};
   }
 
-  & > p {
+  .social_media_paragraph {
     font-size: 12pt;
   }
 
   @media (min-width: 481px) {
-    & > h3 {
+    .social_media_title {
       font-size: 22pt;
     }
   }
@@ -41,21 +41,21 @@ export const BoxLeft = styled.section`
 
     padding: 2rem 0 2rem 10%;
 
-    & > h3 {
+    .social_media_title {
       font-size: 18pt;
     }
 
-    & > p {
+    .social_media_paragraph {
       font-size: 10pt;
     }
   }
 
   @media (min-width: 1200px) {
-    & > h3 {
+    .social_media_title {
       font-size: 22pt;
     }
 
-    & > p {
+    .social_media_paragraph {
       font-size: 12pt;
     }
   }
@@ -66,13 +66,25 @@ export const BoxRigth = styled.section`
 
   @media (min-width: 992px) {
     width: 40%;
+    height: 100%;
 
     display: block;
 
     overflow: hidden;
 
-    & > img {
+    .social_media_box_animated {
       height: 100%;
+
+      & > div {
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .social_media_image {
+      width: 100%;
     }
   }
 `;
