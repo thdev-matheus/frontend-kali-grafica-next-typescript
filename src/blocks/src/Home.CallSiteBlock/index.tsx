@@ -46,7 +46,18 @@ export const CallSiteBlock = () => {
         </C.Animated>
 
         <S.BoxMobile>
-          <img src="https://i.ibb.co/YjbH56v/man.png" alt="man" />
+          <C.Animated
+            width="100%"
+            identifierClass="site_box_animated"
+            customVariants={imgVariants}
+            customTransition={imgTransition}
+          >
+            <img
+              className="site_image"
+              src="https://i.ibb.co/YjbH56v/man.png"
+              alt="man"
+            />
+          </C.Animated>
           <C.LinkButton
             href="#"
             label="Fale com a gente"
@@ -81,6 +92,7 @@ export const CallSiteBlock = () => {
           </p>
         </C.Animated>
       </S.BoxLeft>
+
       <S.BoxRight>
         <C.Animated
           width="100%"

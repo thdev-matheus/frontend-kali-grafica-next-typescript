@@ -86,6 +86,13 @@ export const BoxMobile = styled.section`
 
   margin: 2rem 0;
 
+  .site_box_animated {
+    & > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .site_image {
     width: 15rem;
   }
