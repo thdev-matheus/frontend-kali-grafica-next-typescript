@@ -25,7 +25,7 @@ export const BoxLeft = styled.section`
 
   text-align: center;
 
-  & > h3 {
+  .site_title {
     margin-bottom: 0.5rem;
 
     font-size: 18pt;
@@ -33,18 +33,18 @@ export const BoxLeft = styled.section`
     color: ${(props) => props.theme.primary};
   }
 
-  & > p {
+  .site_paragraph {
     font-size: 12pt;
   }
 
   @media (min-width: 768px) {
     width: 60%;
 
-    & > h3 {
+    .site_title {
       font-size: 16pt;
     }
 
-    & > p {
+    .site_paragraph {
       font-size: 10pt;
     }
   }
@@ -52,11 +52,11 @@ export const BoxLeft = styled.section`
   @media (min-width: 992px) {
     padding: 1rem;
 
-    & > h3 {
+    .site_title {
       font-size: 18pt;
     }
 
-    & > p {
+    .site_paragraph {
       font-size: 12pt;
     }
   }
@@ -66,11 +66,11 @@ export const BoxLeft = styled.section`
 
     padding: 1rem 2rem;
 
-    & > h3 {
+    .site_title {
       font-size: 22pt;
     }
 
-    & > p {
+    .site_paragraph {
       font-size: 14pt;
     }
   }
@@ -86,7 +86,7 @@ export const BoxMobile = styled.section`
 
   margin: 2rem 0;
 
-  & > img {
+  .site_image {
     width: 15rem;
   }
 
@@ -107,19 +107,26 @@ export const BoxRight = styled.section`
     align-items: center;
     gap: 2rem;
 
-    & > img {
+    .site_box_animated {
+      & > div {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .site_image {
       width: 70%;
     }
   }
 
   @media (min-width: 992px) {
-    & > img {
+    .site_image {
       width: 80%;
     }
   }
 
   @media (min-width: 1200px) {
-    & > img {
+    .site_image {
       width: 70%;
     }
   }
