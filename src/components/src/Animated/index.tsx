@@ -77,7 +77,7 @@ export const Animated = ({
             bottom: 4,
             left: 0,
             right: 0,
-            background: slideSecondary ? "#BB582A75" : "#4BA15175",
+            background: slideSecondary ? "#BB582A" : "#4BA151",
             zIndex: 20,
           }}
         />

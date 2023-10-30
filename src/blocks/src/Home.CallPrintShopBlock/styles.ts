@@ -28,7 +28,14 @@ export const BoxLeft = styled.section`
     align-items: center;
     gap: 2rem;
 
-    & > img {
+    .print_shop_box_animated {
+      & > div {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .print_shop_image {
       width: 80%;
     }
   }
@@ -115,7 +122,14 @@ export const BoxMobile = styled.section`
 
   margin: 2rem 0;
 
-  & > img {
+  .print_shop_box_animated {
+    & > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .print_shop_image {
     width: 15rem;
   }
 
