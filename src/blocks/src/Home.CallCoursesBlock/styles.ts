@@ -20,7 +20,7 @@ export const BoxLeft = styled.section`
 
     overflow: hidden;
 
-    & > img {
+    .courses_image {
       width: 100%;
     }
   }
@@ -39,18 +39,18 @@ export const BoxRigth = styled.section`
 
   text-align: center;
 
-  & > h3 {
+  .courses_title {
     font-size: 18pt;
 
     color: ${(props) => props.theme.secondary};
   }
 
-  & > p {
+  .courses_paragraph {
     font-size: 12pt;
   }
 
   @media (min-width: 481px) {
-    & > h3 {
+    .courses_title {
       font-size: 22pt;
     }
   }
@@ -60,21 +60,21 @@ export const BoxRigth = styled.section`
 
     padding: 2rem 10% 2rem;
 
-    & > h3 {
+    .courses_title {
       font-size: 18pt;
     }
 
-    & > p {
+    .courses_paragraph {
       font-size: 10pt;
     }
   }
 
   @media (min-width: 1200px) {
-    & > h3 {
+    .courses_title {
       font-size: 22pt;
     }
 
-    & > p {
+    .courses_paragraph {
       font-size: 12pt;
     }
   }
