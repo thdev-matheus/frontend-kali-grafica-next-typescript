@@ -120,7 +120,11 @@ export const MissionValuesBlock = () => {
             </p>
           </C.Animated>
 
-          <C.LinkButton href="#" label="Saiba mais" title="Saiba mais" />
+          <C.LinkButton
+            href="https://wa.me/558196336588"
+            label="Saiba mais"
+            title="Saiba mais"
+          />
         </S.BoxText>
       </S.Box>
     </S.Container>

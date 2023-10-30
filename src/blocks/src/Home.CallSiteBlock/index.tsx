@@ -59,7 +59,7 @@ export const CallSiteBlock = () => {
             />
           </C.Animated>
           <C.LinkButton
-            href="#"
+            href="https://wa.me/558196336588"
             label="Fale com a gente"
             title="Falar com a Kali"
             animationName="fadeinout"
@@ -107,7 +107,7 @@ export const CallSiteBlock = () => {
           />
         </C.Animated>
         <C.LinkButton
-          href="#"
+          href="https://wa.me/558196336588"
           label="Fale com a gente"
           title="Falar com a Kali"
           animationName="fadeinout"

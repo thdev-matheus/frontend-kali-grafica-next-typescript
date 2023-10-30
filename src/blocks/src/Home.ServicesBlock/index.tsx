@@ -41,7 +41,7 @@ export const ServicesBlock = () => {
 
       <C.LinkButton
         label="Solicite o seu serviço"
-        href="#"
+        href="https://wa.me/c/558196336588"
         title="Solicitar serviço"
       />
     </S.Container>
