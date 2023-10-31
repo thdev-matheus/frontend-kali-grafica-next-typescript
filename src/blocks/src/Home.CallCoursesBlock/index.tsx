@@ -2,8 +2,13 @@
 
 import * as S from "./styles";
 import * as C from "@/components";
+import { callCoursesBlockController } from "@/controllers";
+
+import { v4 as uuid } from "uuid";
 
 export const CallCoursesBlock = () => {
+  const { image, title, content } = callCoursesBlockController;
+
   const imgVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: { opacity: 1, x: 0 },
@@ -18,34 +23,25 @@ export const CallCoursesBlock = () => {
   return (
     <S.Container>
       <S.BoxLeft>
-        <C.Animated width="100%">
-          <img
-            src="https://i.ibb.co/0qZgqnn/courses-img.png"
-            alt="courses"
-            className="courses_image"
-          />
+        <C.Animated
+          width="100%"
+          customTransition={imgTransition}
+          customVariants={imgVariants}
+        >
+          <img src={image.src} alt={image.alt} className="courses_image" />
         </C.Animated>
       </S.BoxLeft>
 
       <S.BoxRigth>
         <C.Animated width="100%">
-          <h3 className="courses_title">Cursos?</h3>
+          <h3 className="courses_title">{title}</h3>
         </C.Animated>
 
-        <C.Animated width="100%">
-          <p className="courses_paragraph">
-            Ainda estamos estruturando mas aqui contaremos com cursos livres em
-            diversas áreas.
-          </p>
-        </C.Animated>
-
-        <C.Animated width="100%">
-          <p className="courses_paragraph">
-            Ah, e vai ter tanto online quanto presencial, então não deixe de
-            acompanhar as nossas redes sociais e fique por dentro dos nossos
-            lançamentos.
-          </p>
-        </C.Animated>
+        {content.map((paragraph) => (
+          <C.Animated width="100%" key={uuid()}>
+            <p className="courses_paragraph">{paragraph}</p>
+          </C.Animated>
+        ))}
       </S.BoxRigth>
     </S.Container>
   );

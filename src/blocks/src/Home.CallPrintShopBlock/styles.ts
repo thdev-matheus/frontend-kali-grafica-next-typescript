@@ -52,7 +52,7 @@ export const BoxRight = styled.section`
 
   text-align: center;
 
-  & > h3 {
+  .print_shop_title {
     margin-bottom: 0.5rem;
 
     font-size: 18pt;
@@ -60,29 +60,29 @@ export const BoxRight = styled.section`
     color: ${(props) => props.theme.secondary};
   }
 
-  & > ul {
+  .print_shop_list {
     list-style: none;
 
     font-size: 12pt;
     font-style: italic;
   }
 
-  & > p {
+  .print_shop_paragraph {
     font-size: 12pt;
   }
 
   @media (min-width: 768px) {
     width: 60%;
 
-    & > h3 {
+    .print_shop_title {
       font-size: 16pt;
     }
 
-    & > ul {
+    .print_shop_list {
       font-size: 10pt;
     }
 
-    & > p {
+    .print_shop_paragraph {
       font-size: 10pt;
     }
   }
@@ -90,15 +90,15 @@ export const BoxRight = styled.section`
   @media (min-width: 992px) {
     padding: 1rem;
 
-    & > h3 {
+    .print_shop_title {
       font-size: 18pt;
     }
 
-    & > ul {
+    .print_shop_list {
       font-size: 12pt;
     }
 
-    & > p {
+    .print_shop_paragraph {
       font-size: 12pt;
     }
   }
@@ -106,7 +106,7 @@ export const BoxRight = styled.section`
   @media (min-width: 1200px) {
     padding: 1rem 2rem;
 
-    & > h3 {
+    .print_shop_title {
       font-size: 22pt;
     }
   }
