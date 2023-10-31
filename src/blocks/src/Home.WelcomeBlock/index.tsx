@@ -2,11 +2,15 @@
 
 import * as S from "./styles";
 import * as C from "@/components";
+import { welcomeBlockController } from "@/controllers";
 
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { v4 as uuid } from "uuid";
 
 export const WelcomeBlock = () => {
+  const { image, title, content } = welcomeBlockController;
+
   const imgRef = useRef(null);
   const imgInView = useInView(imgRef, { once: true });
 
@@ -37,35 +41,31 @@ export const WelcomeBlock = () => {
       <S.BoxLeft>
         <motion.img
           ref={imgRef}
-          src="https://i.ibb.co/mGP3gjd/ripped-paper.png"
-          alt="kali_ripped_paper"
           variants={imgVariants}
           transition={imgTransition}
           initial="hidden"
           animate={imgControl}
+          src={image.src}
+          alt={image.alt}
         />
       </S.BoxLeft>
 
       <S.BoxRight>
         <C.Animated>
-          <h1 className="welcome_title">Bem-vindos a Kali Gráfica!</h1>
+          <h1 className="welcome_title">{title}</h1>
         </C.Animated>
 
-        <C.Animated customTransition={{ duration: 0.5, delay: 0.4 }}>
-          <p className="welcome_paragraph">
-            A Kali é a realização de três sonhos que estão vivos há mais de
-            cinco anos esperando para serem colocados em prática.
-          </p>
-        </C.Animated>
-
-        <C.Animated customTransition={{ duration: 0.5, delay: 0.8 }}>
-          <p className="welcome_paragraph">
-            Apaixonado por tecnologia, ensino e por criar produtos gráficos que
-            atendam as necessidades das pessoas, busquei unir meus conhecimentos
-            e criar este projeto que, com muito esforço e ajuda de Deus se
-            tornou realidade.
-          </p>
-        </C.Animated>
+        {content.map((paragraph, index) => {
+          const delay = (index + 1) * 0.4;
+          return (
+            <C.Animated
+              key={uuid()}
+              customTransition={{ duration: 0.5, delay }}
+            >
+              <p className="welcome_paragraph">{paragraph}</p>
+            </C.Animated>
+          );
+        })}
       </S.BoxRight>
     </S.Container>
   );

@@ -3,8 +3,11 @@
 import * as S from "./styles";
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { headerBlockController } from "@/controllers";
 
 export const HeaderBlock = () => {
+  const { logo } = headerBlockController;
+
   const imgRef = useRef(null);
   const imgInView = useInView(imgRef, { once: true });
 
@@ -48,8 +51,8 @@ export const HeaderBlock = () => {
           transition={imgTransition}
           initial="hidden"
           animate={imgControl}
-          src="/images/dark_logo_sem_desenho.png"
-          alt="logo"
+          src={logo.src}
+          alt={logo.alt}
         />
       </S.Container>
 
