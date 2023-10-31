@@ -99,7 +99,7 @@ export const BoxIcons = styled.div`
 
   margin-top: 0.5rem;
 
-  & > svg {
+  & > a > svg {
     width: 2rem;
     height: 2rem;
 

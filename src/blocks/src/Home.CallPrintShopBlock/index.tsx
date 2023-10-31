@@ -2,8 +2,13 @@
 
 import * as S from "./styles";
 import * as C from "@/components";
+import { callPrintShopBlockController } from "@/controllers";
+
+import { v4 as uuid } from "uuid";
 
 export const CallPrintShopBlock = () => {
+  const { image, action, title, content } = callPrintShopBlockController;
+
   const imgVariants = {
     hidden: { opacity: 0, x: -200 },
     visible: { opacity: 1, x: 0 },
@@ -24,129 +29,62 @@ export const CallPrintShopBlock = () => {
           customVariants={imgVariants}
           customTransition={imgTransition}
         >
-          <img
-            src="https://i.ibb.co/d78Q8pk/printer.png"
-            alt="printer"
-            className="print_shop_image"
-          />
+          <img src={image.src} alt={image.alt} className="print_shop_image" />
         </C.Animated>
         <C.LinkButton
-          href="https://wa.me/558196336588"
-          label="Entrar em contato"
-          title="Contato Kali"
+          href={action.href}
+          label={action.label}
+          title={action.title}
         />
       </S.BoxLeft>
 
       <S.BoxRight>
         <C.Animated width="100%" withSlide slideSecondary>
-          <h3>Precisando de Serviços Gráficos?</h3>
+          <h3 className="print_shop_title">{title}</h3>
         </C.Animated>
 
-        <C.Animated width="100%">
-          <p>Se o que você precisa é de serviços gráficos, como:</p>
-        </C.Animated>
+        {content.map((item) => {
+          if (typeof item === "string") {
+            return (
+              <C.Animated width="100%" key={uuid()}>
+                <p className="print_shop_paragraph">{item}</p>
+              </C.Animated>
+            );
+          } else {
+            return (
+              <>
+                <ul className="print_shop_list" key={uuid()}>
+                  {item.map((listItem) => (
+                    <C.Animated width="100%">
+                      <li>{listItem}</li>
+                    </C.Animated>
+                  ))}
+                </ul>
 
-        <ul>
-          <C.Animated width="100%" withSlide>
-            <li>Impressões em geral</li>
-          </C.Animated>
+                <S.BoxMobile>
+                  <C.Animated
+                    identifierClass="print_shop_box_animated"
+                    width="100%"
+                    customVariants={imgVariants}
+                    customTransition={imgTransition}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="print_shop_image"
+                    />
+                  </C.Animated>
 
-          <C.Animated width="100%" withSlide>
-            <li>Adesivos com e sem recorte</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Banners ou faixas de lona</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Criação de artes</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Criação de logomarcas</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Placas de Sinalização</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Camisas para eventos</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Brindes em geral</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Canecas</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Squeezes</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Mouse pad</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Revelação de fotos</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Criação e confecção de álbuns</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Produtos personalizados</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Almofadas</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>Chaveiros</li>
-          </C.Animated>
-
-          <C.Animated width="100%" withSlide>
-            <li>e muito mais...</li>
-          </C.Animated>
-        </ul>
-
-        <S.BoxMobile>
-          <C.Animated
-            identifierClass="print_shop_box_animated"
-            width="100%"
-            customVariants={imgVariants}
-            customTransition={imgTransition}
-          >
-            <img
-              src="https://i.ibb.co/d78Q8pk/printer.png"
-              alt="printer"
-              className="print_shop_image"
-            />
-          </C.Animated>
-
-          <C.LinkButton
-            href="https://wa.me/558196336588"
-            label="Entrar em contato"
-            title="Contato Kali"
-          />
-        </S.BoxMobile>
-
-        <C.Animated width="100%">
-          <p>É com a gente também!</p>
-        </C.Animated>
-
-        <C.Animated width="100%">
-          <p>
-            Entre em contato conosco, solicite o catálogo e confira nossos
-            serviços de impressão e confecção de brindes e informativos.
-          </p>
-        </C.Animated>
+                  <C.LinkButton
+                    href={action.href}
+                    label={action.label}
+                    title={action.title}
+                  />
+                </S.BoxMobile>
+              </>
+            );
+          }
+        })}
       </S.BoxRight>
     </S.Container>
   );
