@@ -30,7 +30,11 @@ export const CallPrintShopBlock = () => {
             className="print_shop_image"
           />
         </C.Animated>
-        <C.LinkButton href="#" label="Entrar em contato" title="Contato Kali" />
+        <C.LinkButton
+          href="https://wa.me/558196336588"
+          label="Entrar em contato"
+          title="Contato Kali"
+        />
       </S.BoxLeft>
 
       <S.BoxRight>
@@ -127,7 +131,7 @@ export const CallPrintShopBlock = () => {
           </C.Animated>
 
           <C.LinkButton
-            href="#"
+            href="https://wa.me/558196336588"
             label="Entrar em contato"
             title="Contato Kali"
           />

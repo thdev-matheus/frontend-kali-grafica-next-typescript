@@ -2,47 +2,35 @@
 
 import * as S from "./styles";
 import * as C from "@/components";
+import { servicesBlockController } from "@/controllers";
 
-import {
-  FaCode,
-  FaGraduationCap,
-  FaInstagram,
-  FaPenNib,
-} from "react-icons/fa6";
+import { v4 as uuid } from "uuid";
 
 export const ServicesBlock = () => {
+  const { title, services, action } = servicesBlockController;
   return (
     <S.Container>
       <C.Animated>
-        <h2 className="services_title">
-          Confira abaixo as nossas especialidades e conheça alguns dos
-          principais serviços que dispomos
-        </h2>
+        <h2 className="services_title">{title}</h2>
       </C.Animated>
 
       <S.BoxCards>
-        <C.ServiceCard icon={FaPenNib} label="Gráfica Expressa" delay={0.25} />
-        <C.ServiceCard
-          icon={FaCode}
-          label="Criação de Sites e Aplicativos"
-          delay={0.5}
-        />
-        <C.ServiceCard
-          icon={FaGraduationCap}
-          label="Cursos e Palestras"
-          delay={0.75}
-        />
-        <C.ServiceCard
-          icon={FaInstagram}
-          label="Gerenciamento de Redes Sociais"
-          delay={1}
-        />
+        {services.map((service, index) => {
+          const delay = (index + 1) * 0.25;
+          return (
+            <C.ServiceCard
+              icon={service.icon}
+              label={service.label}
+              delay={delay}
+            />
+          );
+        })}
       </S.BoxCards>
 
       <C.LinkButton
-        label="Solicite o seu serviço"
-        href="#"
-        title="Solicitar serviço"
+        label={action.label}
+        href={action.href}
+        title={action.title}
       />
     </S.Container>
   );
